@@ -1,0 +1,194 @@
+.about {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative;
+    bottom: 200%; */
+    overflow: hidden;
+}
+
+.about .about_heading{
+    color: var(--color-white);
+    font-size: 1vw;
+    padding-top: 4%;
+    line-height: 0 ;
+}
+
+.about h1{
+    color: var(--color-primary);
+    font-size: 2vw;
+}
+.about_me {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 15% 70%;
+    gap: 15%;
+    width: 80%;
+}
+
+.about_me_img {
+    /* width: 100%; */
+    width: 200px;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(45deg,
+            transparent,
+            var(--color-primary),
+            transparent);
+    /* display: grid;
+    place-items: center; */
+}
+
+.my-img {
+    width: 200px;
+    /* width: 100%; */
+    height: fit-content;
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.my-img:hover {
+    transform: rotate(0);
+}
+
+.about_cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+}
+
+.about_card{
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 1.3rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.about_card:hover{
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+}
+
+.about_card .about_icon{
+    color: var(--color-primary);
+    margin-bottom:1rem ;
+    font-size: 1.4rem;
+}
+
+.about_card h3{
+    color: var(--color-white);
+}
+.about_card small{
+    font-size: 0.9rem;
+    color: var(--color-light);
+}
+
+.about_content p{
+    margin: 2rem 0 2.6rem;
+    color: var(--color-light);
+}
+
+.modal{
+    background: transparent;
+    backdrop-filter: blur(25px);
+    width: 70%;
+    border-radius: 18px;
+    border: 1px solid var(--color-light);
+    position:relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+}
+
+.modal .modal_header{
+    font-weight: 600;
+    width: 100%;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-primary);
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+}
+
+.modal .modal_content{
+    width: 100%;
+    padding: 10px 5px;
+}
+
+.modal .modal_content li{
+    color: var(--color-light);
+    list-style: circle;
+}
+
+.modal .modal_content li span{
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+.modal .close{
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    padding: 2px 5px;
+    right: -10px;
+    top: -10px;
+    font-size: 24px;
+    background: var(--color-white);
+    border-radius: 18px;
+}
+
+@media screen and (max-width:1024px){
+    .about_me{
+        grid-template-columns: 1fr;
+        gap: 2%;
+    }
+    .about_me_img {
+        width: 300px;
+    }
+    .my-img {
+        width: 300px;
+    }
+    .about .about_heading{
+        font-size: 1.5vw;
+        line-height: 1 ;
+    }
+    
+    .about h1{
+        font-size: 3vw;
+        padding-bottom: 6%;
+    }
+}
+
+@media screen and (max-width:600px){
+    .about_content p{
+        font-size: 3vw;
+        line-height: 1.5;
+    }
+    .about_me{
+        width: 70%;
+        gap: 1%;
+    }
+    .about_me_img {
+        width: 200px;
+    }
+    .my-img {
+        width: 200px;
+    }
+    .about_cards{
+        grid-template-columns: 1fr;
+    }
+    .about .about_heading{
+        font-size: 2vw;
+    }
+    
+    .about h1{
+        font-size: 4vw;
+    }
+}
