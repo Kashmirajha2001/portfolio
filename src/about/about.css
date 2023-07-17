@@ -39,6 +39,7 @@
             transparent);
     /* display: grid;
     place-items: center; */
+    margin-bottom: 9vh;
 }
 
 .my-img {
@@ -56,7 +57,7 @@
 }
 
 .about_cards{
-    margin-bottom: 13%;
+    margin-bottom: 6rem;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 1.5rem;
@@ -178,6 +179,7 @@
     }
     .about_me_img {
         width: 200px;
+        margin-bottom: 4vh;
     }
     .my-img {
         width: 200px;

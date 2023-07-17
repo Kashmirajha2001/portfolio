@@ -1,7 +1,6 @@
-/* .intro_page{
-    max-height: max-content;
-    height: fit-content;
-} */
+.intro_page{
+    margin-bottom: 20vh;
+}
 .heading{
     padding-top: 50px;
     padding-left: 10%;
@@ -174,17 +173,20 @@
     
     .cta{
         top: 16rem;
-        /* font-size: 70%;
-        gap: 0.5rem; */
     }
 
     .socials{
-        position: absolute;
-        top: 25rem;
+        flex-direction: row;
+        top: 21rem;
     }
+
+    .socials::after{
+        display: none;
+    }
+
     .image{
-        width: 28vw;
-        top: 20rem;
+        width: 20vw;
+        top: 30%;
     }
 }
 

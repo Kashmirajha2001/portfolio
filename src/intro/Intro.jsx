@@ -25,6 +25,8 @@ const Intro = () => {
 
   return (
     <section id="#" className="intro_page">
+      {/* <div className="container"> */}
+
       <h1 href="#" className="heading">
         <span>Kashmira Jha</span>_
       </h1>
@@ -38,6 +40,7 @@ const Intro = () => {
       <CTA />
       <Image />
       <Social />
+      {/* </div> */}
     </section>
   );
 };

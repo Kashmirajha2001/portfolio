@@ -14,7 +14,7 @@
 .box::before {
     content: '';
     position: absolute;
-    width: 2180%;
+    width: 180%;
     height: 70%;
     background: linear-gradient(#00ccff,#fff, #d400d4,#81c7fa);
     animation: animate 4s linear infinite;
@@ -50,15 +50,13 @@
 .projects h1{
     color: var(--color-white);
     font-size: 2vw;
-    position: relative;
-    bottom: 8%;
+    padding-top: 3vh;
 }
 
 .projects p{
     color: var(--color-primary);
     font-size: 1em;
-    position: relative;
-    bottom: 8%;
+    padding-bottom: 3vh;
 }
 
 .slider-wrapper {
@@ -215,7 +213,7 @@
     }
 
     .box::before{
-        width: 160%;
+        width: 180%;
     }
 
     .box::after{
