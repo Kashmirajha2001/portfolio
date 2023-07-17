@@ -1,6 +1,6 @@
-.intro_page{
+/* .intro_page{
     margin-bottom: 20vh;
-}
+} */
 .heading{
     padding-top: 50px;
     padding-left: 10%;
@@ -157,6 +157,9 @@
 }
 
 @media screen and (max-height:600px) {
+    .intro_page{
+        margin-bottom: 20vh;
+    }
     .socials{
         bottom: 8rem;
     }
