@@ -3,8 +3,8 @@ import me from '../assets/me.png';
 
 const Image = () => {
   return (
-    <div>
-        <img src={me} className='image'/>
+    <div className='image'>
+        <img src={me} className='img'/>
     </div>
   )
 }
