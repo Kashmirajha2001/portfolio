@@ -168,3 +168,10 @@
         margin-bottom: 40px;
     }
 }
+
+@media screen and (max-height:500px) {
+    .form{
+        width: 70%;
+        margin-bottom: 20vh;
+    }
+}
