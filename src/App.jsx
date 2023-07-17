@@ -33,14 +33,6 @@ function App() {
         </div>
       )}
     </div>
-
-    // <Mode/>
-    // <Navbar/>
-    // <Intro/>
-    // <About/>
-    // <Projects/>
-    // <Art/>
-    // <Contact/>
   );
 }
 
