@@ -14,7 +14,7 @@
 .box::before {
     content: '';
     position: absolute;
-    width: 200%;
+    width: 2180%;
     height: 70%;
     background: linear-gradient(#00ccff,#fff, #d400d4,#81c7fa);
     animation: animate 4s linear infinite;
@@ -210,6 +210,11 @@
         width: 91vw;
         height: 63vh;
     }
+
+    .box::before{
+        width: 160%;
+    }
+
     .box::after{
         inset: 3px;
     }
