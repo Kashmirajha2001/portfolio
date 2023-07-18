@@ -25,9 +25,23 @@ const Intro = () => {
 
   return (
     <section id="#" className="intro_page">
-      {/* <div className="container"> */}
+      <div className="intro_left">
+        <h1 href="#">
+          <span>Kashmira Jha</span>_
+        </h1>
+        <h2>Hi there, It's me</h2>
+        <h1 className="header">Kashmira</h1>
+        <h3>
+          And I am a <span ref={textRef}> </span>
+        </h3>
+        <CTA />
+        <Social /> 
+      </div>
 
-      <h1 href="#" className="heading">
+      <div className="intro_right">
+        <Image />
+      </div>
+      {/* <h1 href="#" className="heading">
         <span>Kashmira Jha</span>_
       </h1>
       <div className="intro_content">
@@ -39,8 +53,7 @@ const Intro = () => {
       </div>
       <CTA />
       <Image />
-      <Social />
-      {/* </div> */}
+      <Social /> */}
     </section>
   );
 };

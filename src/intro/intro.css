@@ -1,6 +1,169 @@
+.intro_page{
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.intro_page .intro_left{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column;
+    padding-left: 10%;
+}
+
+.intro_left h1 span{
+    color: var(--color-primary);
+}
+
+.intro_left h2{
+    margin-top: 3vw;
+    font-size: 30px;
+}
+
+.intro_left .header{
+    font-size: 40px;
+    color: var(--color-primary-variant);
+}
+
+.intro_left h3{
+    font-size: 30px;
+}
+
+.intro_left h3 .ityped-cursor{
+    animation: blink 1s infinite;
+}
+
+@keyframes blink{
+    50%{
+        opacity:1,
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.intro_left h3 span{
+    color: var(--color-primary);
+}
+
+.cta{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.socials{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    align-items:center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.socials::after{
+    content: "";
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary);
+}
+
+.intro_page .intro_right{
+    position: relative;
+    flex:1;
+    display: flex;
+    margin-top: 2rem;
+    align-items:center;
+    justify-content: center;
+}
+
+.intro_right .image{
+    width: 30vw;
+    border-radius: 30%;
+    overflow: hidden;
+    box-shadow: 
+        0 0 5px #81c7fa,
+        0 0 10px #81c7fa,
+        0 0 15px #81c7fa,
+        0 0 20px #81c7fa,
+        0 0 25px #81c7fa, 
+        0 0 35px #81c7fa; 
+}
+
+@media screen and (max-width:900px){
+    .intro_left{
+        line-height: 1;
+    }
+    .intro_left h3{
+        font-size: 3vw;
+        top: 6rem;
+        line-height: 3;
+    }
+
+    .intro_page .intro_right{
+        margin-top: 12rem;
+        right: 3%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .intro_left h2{
+        margin-top: 3rem;
+        font-size: 20px;
+        font-weight: 10;
+    }
+    .intro_left .header{
+        font-size: 30px;
+    }
+
+    .intro_left h3{
+        font-size: 3.5vw;
+    }
+
+    .cta{
+        font-size: 70%;
+        gap: 0.5rem;
+    }
+
+    .socials{
+        margin-top: 6rem;
+    }
+
+    .intro_page .intro_right{
+        margin-top: 16rem;
+    }
+}
+
+@media screen and (max-width:500px){
+    .intro_left{
+        padding-left: 5%;
+    }
+    
+    .intro_left h1{
+        font-size: 25px;
+    }
+
+    .intro_left .header{
+        font-size: 30px;
+    }
+
+    .intro_page .intro_right{
+        right: 10%;
+    }
+
+    .intro_right .image{
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width:360px){
+    .intro_page .intro_right{
+        right: 15%;
+    }
+}
 /* .intro_page{
-    margin-bottom: 20vh;
-} */
+    height: 64rem;
+}
 .heading{
     padding-top: 50px;
     padding-left: 10%;
@@ -229,4 +392,4 @@
         font-size: 60%;
         gap: 0.5rem;
     }
-}
+} */
