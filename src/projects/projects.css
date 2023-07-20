@@ -198,6 +198,9 @@
     }
 }
 @media screen and (max-width:500px) {
+    .box::before{
+        width: 160%;
+    }
     .projects h1{
         font-size: 6vw;
     }
@@ -212,9 +215,9 @@
         height: 63vh;
     }
 
-    .box::before{
-        width: 180%;
-    }
+    /* .box::before{
+        width: 140%;
+    } */
 
     .box::after{
         inset: 3px;

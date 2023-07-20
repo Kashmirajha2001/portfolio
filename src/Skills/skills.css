@@ -1,0 +1,127 @@
+.skills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 10rem;
+}
+
+.skills .heading{
+    color: var(--color-primary);
+}
+
+.circles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+
+.circle_componets{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5rem;
+}
+.skills_container{
+    position: relative;
+}
+
+.mainCircle{
+    position: relative;
+    width: 13rem;
+    height: 13rem;
+    border-radius: 100%;
+    background: var(--color-bg);
+    box-shadow:  -11px 9px 23px 1px var(--color-primary-variant);
+    z-index: 2;
+}
+
+.mainCircle>*{
+    position: absolute;
+}
+
+.mainCircle > :nth-child(1){
+    top: -3rem;
+    left: 4.5rem;
+}
+
+.mainCircle > :nth-child(2){
+    top: 9rem;
+    left: 0rem;
+}
+
+.mainCircle > :nth-child(3){
+    top: 9rem;
+    left: 9rem;
+}
+
+.mainCircle > :nth-child(4){
+    top: 2.5rem;
+    left: 11rem;
+}
+
+.mainCircle > :nth-child(5){
+    top: 2.5rem;
+    left: -2rem;
+}
+
+.mainCircle > :nth-child(6){
+    top: 4rem;
+    left: 4.5rem;
+}
+
+.secCircle{
+    width: 4.5rem;
+    height: 4.5rem;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid var(--color-bg-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-bg);
+}
+
+.secCircle img{
+    transform: scale(0.6);
+}
+
+.backCircle{
+    position: absolute;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.blueCircle{
+    background: #e91e63;
+    left: 5rem;
+    top: 0rem;
+}
+
+.yellowCircle{
+    background: #2196f3;
+    left: 5rem;
+    top: 4rem;
+}
+
+@media screen and (max-width:1035px){
+    .skills{
+        gap: 0.5rem;
+    }
+    .circle_componets{
+        gap: 4rem;
+    }
+    .circles{
+        flex-direction: column;
+        gap:6rem;
+    }
+}
+
+@media screen and (max-width:500px){
+    
+}

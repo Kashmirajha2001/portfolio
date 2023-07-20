@@ -7,7 +7,7 @@ import About from "./about/About";
 // import Mode from './mode/Mode';
 import React, { useState, useEffect } from "react";
 import Loading from "./loading/Loading";
-// import Skills from "./Skills/Skills";
+import Skills from "./Skills/Skills";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -27,7 +27,7 @@ function App() {
           <Navbar />
           <Intro />
           <About />
-          {/* <Skills/> */}
+          <Skills/>
           <Projects />
           <Contact />
         </div>

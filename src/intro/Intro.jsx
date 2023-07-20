@@ -11,7 +11,7 @@ const Intro = () => {
 
   useEffect(() => {
     const typed = new Typed(textRef.current, {
-      strings: ["Student", "Web Developer", "Sketch Artist"],
+      strings: ["Student", "Web Developer", "UI designer", "Sketch Artist"],
       showCursor: true,
       backDelay: 1000,
       backSpeed: 40,
@@ -32,7 +32,7 @@ const Intro = () => {
         <h2>Hi there, It's me</h2>
         <h1 className="header">Kashmira</h1>
         <h3>
-          And I am a <span ref={textRef}> </span>
+          a <span ref={textRef}> </span>
         </h3>
         <CTA />
         <Social /> 
@@ -41,19 +41,6 @@ const Intro = () => {
       <div className="intro_right">
         <Image />
       </div>
-      {/* <h1 href="#" className="heading">
-        <span>Kashmira Jha</span>_
-      </h1>
-      <div className="intro_content">
-        <h2>Hi there, It's me</h2>
-        <h1>Kashmira</h1>
-        <h3>
-          And I am a <span ref={textRef}> </span>
-        </h3>
-      </div>
-      <CTA />
-      <Image />
-      <Social /> */}
     </section>
   );
 };
