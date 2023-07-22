@@ -198,8 +198,11 @@
     }
 }
 @media screen and (max-width:500px) {
+    .projects{
+        margin-bottom: 30%;
+    }
     .box::before{
-        width: 160%;
+       height: 50%;
     }
     .projects h1{
         font-size: 6vw;

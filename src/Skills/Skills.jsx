@@ -25,6 +25,7 @@ const Skills = () => {
             transition={{ duration: 10, repeat: Infinity }}
             className="skills_container"
           >
+          {/* <div className="skills_container"> */}
             <div className="mainCircle">
               <div className="secCircle">
                 <img src={JavaScript} alt="" />
@@ -48,6 +49,7 @@ const Skills = () => {
             <div className="backCircle blueCircle"></div>
             <div className="backCircle yellowCircle"></div>
           </motion.div>
+            {/* </div> */}
         </div>
 
         <div className="circle_componets">
@@ -57,6 +59,7 @@ const Skills = () => {
             transition={{ duration: 10, repeat: Infinity }}
             className="skills_container"
           >
+          {/* <div className="skills_container"> */}
             <div className="mainCircle">
               <div className="secCircle">
                 <img src={C} alt="" />
@@ -72,6 +75,7 @@ const Skills = () => {
             <div className="backCircle blueCircle"></div>
             <div className="backCircle yellowCircle"></div>
           </motion.div>
+          {/* </div> */}
         </div>
 
         <div className="circle_componets">
@@ -81,6 +85,7 @@ const Skills = () => {
             transition={{ duration: 10, repeat: Infinity }}
             className="skills_container"
           >
+          {/* <div className="skills_container"> */}
             <div className="mainCircle">
               <div className="secCircle">
                 <img src={Git} alt="" />
@@ -96,6 +101,7 @@ const Skills = () => {
             <div className="backCircle blueCircle"></div>
             <div className="backCircle yellowCircle"></div>
           </motion.div>
+          {/* </div> */}
         </div>
       </div>
     </section>

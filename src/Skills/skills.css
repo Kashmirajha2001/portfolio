@@ -98,13 +98,13 @@
 }
 
 .blueCircle{
-    background: #e91e63;
+    background:linear-gradient( #e91e63,#2196f3);
     left: 5rem;
     top: 0rem;
 }
 
 .yellowCircle{
-    background: #2196f3;
+    background: linear-gradient(#ffef44,#e91e1e);
     left: 5rem;
     top: 4rem;
 }
@@ -122,6 +122,62 @@
     }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:450px){
+    .circles{
+        gap: 4rem;
+    }
+    .circle_componets{
+        gap: 3rem;
+    }
+    .mainCircle{
+        width: 10rem;
+        height: 10rem;
+    }
+    .secCircle{
+        width: 3rem;
+        height: 3rem;
+    }
+    .backCircle{
+        height: 6rem;
+        width: 6rem;
+    }
+    .mainCircle > :nth-child(1){
+        top: -2rem;
+        left: 3.5rem;
+    }
     
+    .mainCircle > :nth-child(2){
+        top: 7rem;
+        left: 0rem;
+    }
+    
+    .mainCircle > :nth-child(3){
+        top: 7rem;
+        left: 7rem;
+    }
+    
+    .mainCircle > :nth-child(4){
+        top: 2.5rem;
+        left: 9rem;
+    }
+    
+    .mainCircle > :nth-child(5){
+        top: 2.5rem;
+        left: -2rem;
+    }
+    
+    .mainCircle > :nth-child(6){
+        top: 4rem;
+        left: 4.5rem;
+    }
+
+    .blueCircle{
+        left: 5rem;
+        top: -1rem;
+    }
+    
+    .yellowCircle{
+        left: 6rem;
+        top: 3rem;
+    }
 }
