@@ -95,7 +95,7 @@
         line-height: 1;
     }
     .intro_left h3{
-        font-size: 3vw;
+        font-size: 3.5vw;
         top: 6rem;
         line-height: 3;
     }
@@ -117,7 +117,7 @@
     }
 
     .intro_left h3{
-        font-size: 3.5vw;
+        font-size: 4vw;
     }
 
     .cta{
@@ -143,6 +143,10 @@
         font-size: 25px;
     }
 
+    .intro_left h3{
+        font-size: 5vw;
+    }
+
     .intro_left .header{
         font-size: 30px;
     }
@@ -161,235 +165,9 @@
         right: 15%;
     }
 }
-/* .intro_page{
-    height: 64rem;
-}
-.heading{
-    padding-top: 50px;
-    padding-left: 10%;
-    color: var(--color-white);
-}
 
-.heading span{
-    color: var(--color-primary);
-}
-
-.intro_content{
-    position: absolute;
-    padding-left:10%;
-    top: 20%;
-}
-
-.intro_content h1{
-    font-size: 40px;
-    color: var(--color-primary-variant);
-}
-.intro_content h2{
-    font-size: 30px;
-}
-.intro_content h3{
-    font-size: 30px;
-}
-
-.intro_content h3 .ityped-cursor{
-    animation: blink 1s infinite;
-}
-
-@keyframes blink{
-    50%{
-        opacity:1,
-    }
-    100%{
-        opacity: 0;
+@media screen and (max-width:400px){
+    .intro_left h3{
+        font-size: 6vw;
     }
 }
-
-.intro_content h3 span{
-    font-size: 30px;
-    color: var(--color-primary);
-}
-
-.cta{
-    position: absolute;
-    padding-left:10%;
-    top: 47%;
-    display: flex;
-    gap: 1.2rem;
-}
-
-.image{
-    position: absolute;
-    width: 30vw;
-    height: fit-content;
-    border: 0;
-    border-radius: 30%;
-    overflow: hidden;
-    right: 10%;
-    top: 15%;
-    background: transparent;
-    box-shadow: 
-        0 0 5px #81c7fa,
-        0 0 10px #81c7fa,
-        0 0 15px #81c7fa,
-        0 0 20px #81c7fa,
-        0 0 25px #81c7fa, 
-        0 0 35px #81c7fa; 
-}
-
-.image img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-.socials{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.8rem;
-    position: absolute;
-    left: 10%;
-    bottom: 5rem;
-}
-
-.socials::after{
-    content: "";
-    width: 1px;
-    height: 2rem;
-    background: var(--color-primary);
-}
-
-@media screen and (max-width:1000px){
-    .image{
-        top: 30%;
-    }
-}
-
-@media screen and (max-width:800px){
-    .image{
-        top: 50%;
-        width: 30vw;
-        right: 10%;
-    }
-    
-    .intro_content{
-        line-height: 1;
-    }
-
-    .intro_content h3{
-        top: 6rem;
-        line-height: 3;
-    }
-}
-
-@media screen and (max-width:650px) {
-    .socials{
-        bottom: 8rem;
-    }
-
-    .intro_content{
-        position: absolute;
-        top: 15%;
-    }
-    
-    .intro_content h1{
-        font-size: 30px;
-    }
-    .intro_content h2{
-        font-size: 20px;
-        font-weight: 10;
-    }
-    .intro_content h3{
-        font-size: 25px;
-    }
-
-    .intro_content h3 span{
-        font-size: 25px;
-    }
-
-    .cta{
-        top: 36%;
-        font-size: 70%;
-        gap: 0.5rem;
-    }
-    .image{
-        width: 40vw;
-        right: 10%;
-        top:50%;
-    }
-}
-
-@media screen and (max-height:600px) {
-    .intro_page{
-        margin-bottom: 20vh;
-    }
-    .socials{
-        bottom: 8rem;
-    }
-
-    .intro_content{
-        top: 7rem;
-        line-height: 1;
-    }
-
-    .intro_content h3{
-        top: 6rem;
-        line-height: 3;
-    }
-    
-    .cta{
-        top: 16rem;
-    }
-
-    .socials{
-        flex-direction: row;
-        top: 21rem;
-    }
-
-    .socials::after{
-        display: none;
-    }
-
-    .image{
-        width: 20vw;
-        top: 30%;
-    }
-}
-
-@media screen and (max-width:500px){
-    .image{
-        top:50%;
-        width: 45vw;
-    }
-    .heading{
-        padding-left: 5%;
-    }
-
-    .intro_content{
-        position: absolute;
-        padding-left:5%;
-        top: 15%;
-    }
-    
-    .intro_content h1{
-        font-size: 25px;
-    }
-    .intro_content h2{
-        font-size: 15px;
-        font-weight: 10;
-    }
-    .intro_content h3{
-        font-size: 20px;
-    }
-
-    .intro_content h3 span{
-        font-size: 20px;
-    }
-
-    .cta{
-        padding-left:5%;
-        top: 32%;
-        font-size: 60%;
-        gap: 0.5rem;
-    }
-} */
