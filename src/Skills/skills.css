@@ -8,6 +8,7 @@
 }
 
 .skills .heading{
+    font-size: 2rem;
     color: var(--color-primary);
 }
 
@@ -123,6 +124,9 @@
 }
 
 @media screen and (max-width:450px){
+    .skills .heading{
+        font-size: 1.2rem;
+    }
     .circles{
         gap: 4rem;
     }
