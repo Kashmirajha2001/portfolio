@@ -5,21 +5,42 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import Popup from "reactjs-popup";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  const variantAbout = {
+    visible: { opacity: 1, scale: 1 },
+    hidden: { opacity: 0, scale: 0.2 },
+  };
   return (
     <section id="about" className="about">
       <h5 className="about_heading">Get To Know </h5>
       <h1>About Me</h1>
       <div className="about_me">
-        <div className="about_me_img">
+        <motion.div
+        animate={inView ? "visible" : "hidden"}
+        variants={variantAbout}
+        exit="hidden"
+        transition={{ duration: 2 }}
+        ref={ref} className="about_me_img">
           <div className="my-img">
             <img src={me} alt="About img" />
           </div>
-        </div>
+        </motion.div>
 
         <div className="about_content">
-          <p>
+          <motion.p
+        animate={inView ? "visible" : "hidden"}
+        variants={variantAbout}
+        exit="hidden"
+        transition={{ duration: 2 }}
+        ref={ref}>
             Hello there! I am a Computer Science Engineering (CSE) student with
             a passion for frontend development. I specialize in using HTML, CSS,
             Bootstrap, React, and JavaScript to create interactive, responsive
@@ -29,7 +50,7 @@ const About = () => {
             languages, I am proficient in C++, Java, and Python. I am always
             eager to learn new technologies and stay up-to-date with the latest
             trends in the industry.
-          </p>
+          </motion.p>
           <div className="about_cards">
             <Popup
               trigger={

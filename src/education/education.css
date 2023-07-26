@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     margin-bottom: 6rem;
-    padding: 0rem 1rem 0rem 3rem;
+    padding: 0rem 6rem 0rem 7rem;
     gap: 2rem;
 }
 
@@ -21,18 +21,13 @@
 .education .contents .content_box{
     position: relative;
     padding: 20px;
-    background: var(--color-bg-variant);
-    border: 1px solid transparent;
+    border: 1px solid var(--color-primary-variant);
     border-radius: 1rem;
     margin-bottom: 20px;
     transition: var(--transition);
     cursor: pointer;
-}
-
-.education .contents .content_box:hover{
     box-shadow: 8px 8px 12px 0px var(--color-primary-variant);
     background: transparent;
-    border-color: var(--color-primary-variant);
 }
 
 .education .contents .content_box:before{
@@ -70,8 +65,17 @@
     }
 }
 
-@media screen and (max-width:500px){
+@media screen and (max-width:600px){
+    .content_box h3{
+        font-size: 0.9rem;
+    }
     .content_box h2{
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+    .content_box p{
+        font-size: 0.8rem;
+    }
+    .content_box span{
+        font-size: 1rem;
     }
 }

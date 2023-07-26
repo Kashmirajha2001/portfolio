@@ -5,6 +5,7 @@ import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import CTA from "./CTA";
 import Image from "./Image";
+import { motion } from "framer-motion";
 
 const Intro = () => {
   const textRef = useRef(null);
@@ -25,7 +26,12 @@ const Intro = () => {
 
   return (
     <section id="#" className="intro_page">
-      <div className="intro_left">
+      <motion.div
+        initial={{x:-500}}
+        animate={{x:0}}
+        transition={{duration:1.5}}
+       className="intro_left"
+       >
         <h1 href="#">
           <span>Kashmira Jha</span>_
         </h1>
@@ -36,7 +42,7 @@ const Intro = () => {
         </h3>
         <CTA />
         <Social /> 
-      </div>
+      </motion.div>
 
       <div className="intro_right">
         <Image />
