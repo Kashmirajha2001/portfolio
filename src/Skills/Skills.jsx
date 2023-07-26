@@ -22,7 +22,7 @@ const Skills = () => {
           <h3 className="title">Web developement</h3>
           <motion.div
             animate={{ rotate: -360 }}
-            transition={{ease:"linear", duration: 10, repeat: Infinity, delay:1, }}
+            transition={{ease:"linear", duration: 10, repeat: Infinity}}
             className="skills_container"
           >
           {/* <div className="skills_container"> */}
@@ -56,7 +56,7 @@ const Skills = () => {
           <h3 className="title">Languages</h3>
           <motion.div
             animate={{ rotate: -360 }}
-            transition={{ duration: 10, repeat: Infinity }}
+            transition={{ease:"linear", duration: 10, repeat: Infinity }}
             className="skills_container"
           >
           {/* <div className="skills_container"> */}
@@ -82,7 +82,7 @@ const Skills = () => {
           <h3 className="title">Tools</h3>
           <motion.div
             animate={{ rotate: -360 }}
-            transition={{ duration: 10, repeat: Infinity }}
+            transition={{ease:"linear", duration: 10, repeat: Infinity }}
             className="skills_container"
           >
           {/* <div className="skills_container"> */}
