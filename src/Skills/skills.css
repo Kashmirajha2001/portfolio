@@ -99,13 +99,13 @@
 }
 
 .blueCircle{
-    background:linear-gradient( #e91e63,#2196f3);
+    background:linear-gradient( var(--color-primary),var(--color-primary-variant));
     left: 5rem;
     top: 0rem;
 }
 
 .yellowCircle{
-    background: linear-gradient(#ffef44,#e91e1e);
+    background: linear-gradient(var(--color-bg-variant),var(--color-primary-variant));
     left: 5rem;
     top: 4rem;
 }

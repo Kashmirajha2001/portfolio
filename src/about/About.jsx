@@ -10,8 +10,13 @@ import { useInView } from "react-intersection-observer";
 
 const About = () => {
   const [ref, inView] = useInView({
-    threshold: 0.1,
+    threshold: 0,
     triggerOnce: false,
+  });
+
+  const [refcard, inViewCard] = useInView({
+    threshold: 0,
+    triggerOnce: true,
   });
 
   const variantAbout = {
@@ -24,11 +29,13 @@ const About = () => {
       <h1>About Me</h1>
       <div className="about_me">
         <motion.div
-        animate={inView ? "visible" : "hidden"}
-        variants={variantAbout}
-        exit="hidden"
-        transition={{ duration: 2 }}
-        ref={ref} className="about_me_img">
+          animate={inView ? "visible" : "hidden"}
+          variants={variantAbout}
+          exit="hidden"
+          transition={{ duration: 2 }}
+          ref={ref}
+          className="about_me_img"
+        >
           <div className="my-img">
             <img src={me} alt="About img" />
           </div>
@@ -36,11 +43,12 @@ const About = () => {
 
         <div className="about_content">
           <motion.p
-        animate={inView ? "visible" : "hidden"}
-        variants={variantAbout}
-        exit="hidden"
-        transition={{ duration: 2 }}
-        ref={ref}>
+            animate={inView ? "visible" : "hidden"}
+            variants={variantAbout}
+            exit="hidden"
+            transition={{ duration: 2 }}
+            ref={ref}
+          >
             Hello there! I am a Computer Science Engineering (CSE) student with
             a passion for frontend development. I specialize in using HTML, CSS,
             Bootstrap, React, and JavaScript to create interactive, responsive
@@ -54,13 +62,19 @@ const About = () => {
           <div className="about_cards">
             <Popup
               trigger={
-                <div className="about_card">
+                <motion.div
+                  ref={refcard}
+                  initial={{ rotateY: 0 }}
+                  animate={{ rotateY: inViewCard ? 360 : 0 }}
+                  transition={{ duration: 1 }}
+                  className="about_card"
+                >
                   <div className="about_icon">
                     <EmojiEventsIcon />
                   </div>
                   <h3>Achievements</h3>
                   <small>Read More</small>
-                </div>
+                </motion.div>
               }
               modal
             >
@@ -95,20 +109,35 @@ const About = () => {
                 </div>
               )}
             </Popup>
-            <a className="about_card" href="#skills">
+            <motion.a
+              ref={refcard}
+              initial={{ rotateY: 0 }}
+              animate={{ rotateY: inViewCard ? 360 : 0 }}
+              transition={{ duration: 1 }}
+              className="about_card"
+              href="#skills"
+            >
               <div className="about_icon">
                 <SchoolIcon />
               </div>
               <h3>Skills</h3>
               <small>Read More</small>
-            </a>
-            <a className="about_card" href="#projects">
+            </motion.a>
+
+            <motion.a
+              ref={refcard}
+              initial={{ rotateY: 0 }}
+              animate={{ rotateY: inViewCard ? 360 : 0 }}
+              transition={{ duration: 1 }}
+              className="about_card"
+              href="#projects"
+            >
               <div className="about_icon">
                 <AccountTreeIcon />
               </div>
               <h3>Projects</h3>
               <small>Read More</small>
-            </a>
+            </motion.a>
           </div>
         </div>
       </div>

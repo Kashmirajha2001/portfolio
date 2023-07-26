@@ -1,20 +1,35 @@
 import "./contact.css";
-import { useRef } from 'react';
-import emailjs from 'emailjs-com';
+import { useRef, useState } from "react";
+import emailjs from "emailjs-com";
+import Alert from "@mui/material/Alert";
+import { motion } from "framer-motion";
 
 const Contact = () => {
+  const [flag, setFlag] = useState(false);
+
   const form = useRef();
 
   const sendEmail = (e) => {
+    setFlag(true);
     e.preventDefault();
 
-    emailjs.sendForm('service_lmnqlde', 'template_96wo5pv', form.current, '7Of6f8TmQj78POLaD')
-    e.target.reset()
+    emailjs.sendForm(
+      "service_lmnqlde",
+      "template_96wo5pv",
+      form.current,
+      "7Of6f8TmQj78POLaD"
+    );
+    e.target.reset();
   };
+
+  const handleClose = () => {
+    setFlag(false);
+  };
+  setTimeout(handleClose, 5000);
 
   return (
     <section id="contact" className="contact">
-      <form className="form" ref={form} onSubmit={sendEmail}>
+      <form ref={form} className="form" onSubmit={sendEmail}>
         <h2> Contact</h2>
         <div className="row100">
           <div className="col">
@@ -59,9 +74,38 @@ const Contact = () => {
         </div>
         <div className="row100">
           <div className="col">
-            <button type="submit" className="btn btn-primary">Send</button>
+            <button type="submit" className="btn btn-primary">
+              Send
+            </button>
           </div>
         </div>
+        {flag ? (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.5,
+              ease: [0, 0.71, 0.2, 1.01],
+            }}
+          >
+            <Alert
+              onClose={handleClose}
+              severity="success"
+              style={{
+                width: "fit-content",
+                position: "absolute",
+                bottom: "1rem",
+                left: "50%",
+                transform: "translate(-50%, 0)",
+              }}
+            >
+              Thank You!
+            </Alert>
+          </motion.div>
+        ) : (
+          ""
+        )}
       </form>
     </section>
   );

@@ -16,7 +16,7 @@
     position: absolute;
     width: 180%;
     height: 70%;
-    background: linear-gradient(#00ccff,#fff, #d400d4,#81c7fa);
+    background: linear-gradient(var(--color-primary),#fff,var(--color-primary-variant));
     animation: animate 4s linear infinite;
 }
 
