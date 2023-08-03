@@ -8,7 +8,8 @@
     position: relative;
     flex: 1;
     flex-direction: column;
-    padding-left: 10%;
+    /* padding-left: 10%; */
+    padding-left: 15%;
 }
 
 .intro_left h1 span{
@@ -75,10 +76,12 @@
     margin-top: 2rem;
     align-items:center;
     justify-content: center;
+    right: 5%;
 }
 
 .intro_right .image{
-    width: 30vw;
+    /* width: 30vw; */
+    width: 20vw;
     border-radius: 30%;
     overflow: hidden;
     box-shadow: 
@@ -103,6 +106,14 @@
     .intro_page .intro_right{
         margin-top: 12rem;
         right: 3%;
+    }
+
+    .intro_right .image{
+        width: 30vw;
+    }
+
+    .intro_page .intro_left{
+        padding-left: 10%;
     }
 }
 

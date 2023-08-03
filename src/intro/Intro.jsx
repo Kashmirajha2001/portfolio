@@ -6,8 +6,10 @@ import { useEffect, useRef } from "react";
 import CTA from "./CTA";
 import Image from "./Image";
 import { motion } from "framer-motion";
+// import CircleLoader from "react-spinners/CircleLoader";
 
 const Intro = () => {
+  // const [loading, setLoading] = useState(false);
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -19,9 +21,16 @@ const Intro = () => {
       loop: true,
       typeSpeed: 50,
     });
+
+    // setLoading(true);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 2000);
+
     return () => {
       typed.destroy();
     };
+
   }, []);
 
   return (
@@ -42,8 +51,10 @@ const Intro = () => {
         </h3>
         <CTA />
         <Social /> 
+      {/* <div className="spinners">
+        <CircleLoader color={"#81c7fa"} loading={loading} size={100} />
+      </div> */}
       </motion.div>
-
       <div className="intro_right">
         <Image />
       </div>
