@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 
 const About = () => {
   const [ref, inView] = useInView({
-    threshold: 0,
+    threshold: 0.1,
     triggerOnce: false,
   });
 
@@ -32,7 +32,7 @@ const About = () => {
           animate={inView ? "visible" : "hidden"}
           variants={variantAbout}
           exit="hidden"
-          transition={{ duration: 2 }}
+          transition={{ duration: 1 }}
           ref={ref}
           className="about_me_img"
         >
