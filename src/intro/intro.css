@@ -8,7 +8,6 @@
     position: relative;
     flex: 1;
     flex-direction: column;
-    /* padding-left: 10%; */
     padding-left: 15%;
 }
 
@@ -102,7 +101,7 @@
 }
 
 @media screen and (max-width:900px){
-    .intro_left{
+    .intro_page .intro_left{
         line-height: 1;
         padding-left: 10%;
     }
@@ -159,8 +158,8 @@
 }
 
 @media screen and (max-width:500px){
-    .intro_left{
-        padding-left: 5%;
+    .intro_page .intro_left{
+        padding-left: 7%;
     }
     
     .intro_left h1{
@@ -197,7 +196,7 @@
 
 @media screen and (max-width:360px){
     .intro_page .intro_right{
-        right: 20%;
+        right: 13%;
     }
 }
 
