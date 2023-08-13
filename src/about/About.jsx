@@ -23,17 +23,17 @@ const About = () => {
     visible: { opacity: 1, scale: 1 },
     hidden: { opacity: 0, scale: 0.2 },
   };
+
   return (
     <section id="about" className="about">
       <h5 className="about_heading">Get To Know </h5>
       <h1>About Me</h1>
       <div className="about_me">
         <motion.div
-          animate={inView ? "visible" : "hidden"}
-          variants={variantAbout}
-          exit="hidden"
-          transition={{ duration: 1 }}
-          ref={ref}
+            animate={inViewCard ? "visible" : "hidden"}
+            variants={variantAbout}
+            exit="hidden"
+            transition={{ duration: 2 }}
           className="about_me_img"
         >
           <div className="my-img">
