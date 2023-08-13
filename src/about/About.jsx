@@ -29,17 +29,11 @@ const About = () => {
       <h5 className="about_heading">Get To Know </h5>
       <h1>About Me</h1>
       <div className="about_me">
-        <motion.div
-            animate={inViewCard ? "visible" : "hidden"}
-            variants={variantAbout}
-            exit="hidden"
-            transition={{ duration: 2 }}
-          className="about_me_img"
-        >
+        <div className="about_me_img">
           <div className="my-img">
             <img src={me} alt="About img" />
           </div>
-        </motion.div>
+        </div>
 
         <div className="about_content">
           <motion.p
