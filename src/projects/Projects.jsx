@@ -4,6 +4,7 @@ import Slider from "react-animated-slider";
 import "react-animated-slider/build/horizontal.css";
 import img1 from "../assets/proj1.jpg";
 import img2 from "../assets/proj2.jpg";
+import img3 from "../assets/proj3.jpg";
 
 const content = [
   {
@@ -25,8 +26,10 @@ const content = [
   {
     title: "Phasellus volutpat metus",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras mattis consectetur purus sit amet fermentum.",
-    image: "https://i.imgur.com/DvmN8Hx.jpg",
+      "Our collaborative project revolves around an online Tic Tac Toe game with a real-time chat system. I contributed to the project by designing and implementing the frontend interface.",
+    image: img3,
+    demo: "https://play-real-tictactoe.cloud/",
+    github: "https://github.com/Kashmirajha2001/tic-tac-toe",
   },
 ];
 
@@ -36,7 +39,7 @@ const Projects = () => {
       <h1>Project Showcase</h1>
       <p>Highlighting My Creative Endeavors</p>
       <div className="box">
-        <Slider className="slider-wrapper">
+        <Slider className="slider-wrapper" autoplay={1000}>
           {content.map((item, index) => (
             <div
               key={index}
