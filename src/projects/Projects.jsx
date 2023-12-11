@@ -24,7 +24,7 @@ const content = [
     github: "https://github.com/Kashmirajha2001/artsbykash",
   },
   {
-    title: "Phasellus volutpat metus",
+    title: "Tic tac Toe",
     description:
       "Our collaborative project revolves around an online Tic Tac Toe game with a real-time chat system. I contributed to the project by designing and implementing the frontend interface.",
     image: img3,
