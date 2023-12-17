@@ -12,11 +12,11 @@ export const CTA = () => {
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
-      <a href={CV} download className="btn">
+      <a href={CV} download className="btn" style={{paddingTop:"0rem"}}>
         Download CV
         <DownloadForOfflineIcon className="CTA_icon"/>
       </a>
-      <a href="#contact" className="btn btn-primary">
+      <a href="#contact" className="btn btn-primary" style={{paddingTop:"0rem"}}>
         Let's Talk
         <ArrowCircleRightIcon className="CTA_icon"/>
       </a>

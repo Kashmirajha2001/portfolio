@@ -45,9 +45,9 @@ const Intro = () => {
         <CTA />
         <Social /> 
       </motion.div>
-      <div className="spinners">
+      {/* <div className="spinners">
         <RingLoader color={"var(--color-primary"} size={100} className="RingLoader"/>
-      </div>
+      </div> */}
       <div className="intro_right">
         <Image />
       </div>

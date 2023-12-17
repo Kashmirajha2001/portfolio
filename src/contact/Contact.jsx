@@ -33,6 +33,7 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <h2> Contact</h2>
+      <p>Let's get connected</p>
       <div className="contact_content">
         <div className="contact_left">
           <div>
@@ -45,7 +46,7 @@ const Contact = () => {
           </div>
           <div>
             <h3><InstagramIcon className="contact_icon"/> Instagram</h3>
-            <a href="https://instagram.com/artsbykash?igshid=MzNlNGNkZWQ4Mg==" className="btn">Connect <ArrowCircleRightIcon className="contact_icon"/></a>
+            <a href="https://instagram.com/artsbykash?igshid=MzNlNGNkZWQ4Mg==" className="btn" style={{marginBottom:"20px"}}>Connect <ArrowCircleRightIcon className="contact_icon"/></a>
           </div>
         </div>
         <form ref={form} className="form" onSubmit={sendEmail}>

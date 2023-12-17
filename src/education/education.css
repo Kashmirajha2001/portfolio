@@ -8,6 +8,13 @@
     gap: 2rem;
 }
 
+.education_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20vw;
+}
+
 .education h1{
     font-size: 2rem;
     color: var(--color-primary);
