@@ -3,6 +3,9 @@ import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import Alert from "@mui/material/Alert";
 import { motion } from "framer-motion";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 const Contact = () => {
   const [flag, setFlag] = useState(false);
@@ -29,84 +32,100 @@ const Contact = () => {
 
   return (
     <section id="contact" className="contact">
-      <form ref={form} className="form" onSubmit={sendEmail}>
-        <h2> Contact</h2>
-        <div className="row100">
-          <div className="col">
-            <div className="inputBox">
-              <input type="text" name="firstname" required="required" />
-              <span className="text">First Name</span>
-              <span className="line"></span>
-            </div>
+      <h2> Contact</h2>
+      <div className="contact_content">
+        <div className="contact_left">
+          <div>
+            <h3>Email</h3>
+            <p>kashmirajha2001@gmail.com</p>
           </div>
-          <div className="col">
-            <div className="inputBox">
-              <input type="text" name="lastname" required="required" />
-              <span className="text">Last Name</span>
-              <span className="line"></span>
-            </div>
+          <div>
+            <h3><LinkedInIcon className="contact_icon"/> LinkedIn</h3>
+            <a href="https://www.linkedin.com/in/kashmira-jha-52405022b" target='_blank' className="btn">Connect <ArrowCircleRightIcon className="contact_icon"/></a>
+          </div>
+          <div>
+            <h3><InstagramIcon className="contact_icon"/> Instagram</h3>
+            <a href="https://instagram.com/artsbykash?igshid=MzNlNGNkZWQ4Mg==" className="btn">Connect <ArrowCircleRightIcon className="contact_icon"/></a>
           </div>
         </div>
-        <div className="row100">
-          <div className="col">
-            <div className="inputBox">
-              <input type="text" name="email" required="required" />
-              <span className="text">Email</span>
-              <span className="line"></span>
+        <form ref={form} className="form" onSubmit={sendEmail}>
+          <div className="row100">
+            <div className="col">
+              <div className="inputBox">
+                <input type="text" name="firstname" required="required" />
+                <span className="text">First Name</span>
+                <span className="line"></span>
+              </div>
+            </div>
+            <div className="col">
+              <div className="inputBox">
+                <input type="text" name="lastname" required="required" />
+                <span className="text">Last Name</span>
+                <span className="line"></span>
+              </div>
             </div>
           </div>
-          <div className="col">
-            <div className="inputBox">
-              <input type="text" name="mobile" required="required" />
-              <span className="text">Mobile</span>
-              <span className="line"></span>
+          <div className="row100">
+            <div className="col">
+              <div className="inputBox">
+                <input type="text" name="email" required="required" />
+                <span className="text">Email</span>
+                <span className="line"></span>
+              </div>
+            </div>
+            <div className="col">
+              <div className="inputBox">
+                <input type="text" name="mobile" required="required" />
+                <span className="text">Mobile</span>
+                <span className="line"></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="row100">
-          <div className="col">
-            <div className="inputBox textarea">
-              <textarea required="required" name="msg" />
-              <span className="text">Type Your Message here...</span>
-              <span className="line"></span>
+          <div className="row100">
+            <div className="col">
+              <div className="inputBox textarea">
+                <textarea required="required" name="msg" />
+                <span className="text">Type Your Message here...</span>
+                <span className="line"></span>
+              </div>
             </div>
           </div>
-        </div>
-        <div className="row100">
-          <div className="col">
-            <button type="submit" className="btn btn-primary">
-              Send
-            </button>
+          <div className="row100">
+            <div className="col">
+              <button type="submit" className="btn btn-primary">
+                Send
+              </button>
+            </div>
           </div>
-        </div>
-        {flag ? (
-          <motion.div
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.5,
-              ease: [0, 0.71, 0.2, 1.01],
-            }}
-          >
-            <Alert
-              onClose={handleClose}
-              severity="success"
-              style={{
-                width: "fit-content",
-                position: "absolute",
-                bottom: "1rem",
-                left: "50%",
-                transform: "translate(-50%, 0)",
+          {flag ? (
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01],
               }}
             >
-              Thank You!
-            </Alert>
-          </motion.div>
-        ) : (
-          ""
-        )}
-      </form>
+              <Alert
+                onClose={handleClose}
+                severity="success"
+                style={{
+                  width: "fit-content",
+                  position: "absolute",
+                  bottom: "1rem",
+                  left: "50%",
+                  transform: "translate(-50%, 0)",
+                }}
+              >
+                Thank You!
+              </Alert>
+            </motion.div>
+          ) : (
+            ""
+          )}
+        </form>
+      </div>
     </section>
   );
 };

@@ -44,12 +44,12 @@ const Projects = () => {
             <div
               key={index}
               className="slider-content"
-              style={{
-                background: `url('${item.image}') no-repeat center center`,
-              }}
+              // style={{
+              //   background: `url('${item.image}') no-repeat center center`,
+              // }}
             >
-              <span></span>
               <div className="inner">
+                <div className="proj_img"><img src={item.image} alt="" /></div>
                 <h1>{item.title}</h1>
                 <p>{item.description}</p>
                 <div className="proj_btn">

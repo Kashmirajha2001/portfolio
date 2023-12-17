@@ -51,6 +51,12 @@
     gap: 1.2rem;
 }
 
+.CTA_icon{
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
 .socials{
     width: fit-content;
     display: flex;

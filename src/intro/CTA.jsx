@@ -1,6 +1,8 @@
 import React from "react";
 import CV from "../assets/Kashmira Jha_CSE.pdf";
 import { motion } from "framer-motion";
+import DownloadForOfflineIcon from '@mui/icons-material/DownloadForOffline';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 
 export const CTA = () => {
   return (
@@ -12,9 +14,11 @@ export const CTA = () => {
     >
       <a href={CV} download className="btn">
         Download CV
+        <DownloadForOfflineIcon className="CTA_icon"/>
       </a>
       <a href="#contact" className="btn btn-primary">
         Let's Talk
+        <ArrowCircleRightIcon className="CTA_icon"/>
       </a>
     </motion.div>
   );

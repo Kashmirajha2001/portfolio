@@ -6,9 +6,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     padding: 20px;
     width: 100%;
     margin-bottom: 10rem;
+}
+
+.contact h2{
+    color:var(--color-white);
+    font-size: 30px;
+    margin-bottom: 40px;
+    text-shadow: 
+        0 0 5px #81c7fa,
+        0 0 10px #81c7fa,
+        0 0 15px #81c7fa,
+        0 0 20px #81c7fa;
 }
 
 .contact::before{
@@ -29,12 +41,30 @@
     clip-path: circle(18% at 20% 40%);
 }
 
+.contact_content{
+    display: flex;
+    align-items:flex-start;
+    z-index: 10;
+    /* gap: 10vw; */
+}
+
+.contact_left div{
+    padding: 25px 0 25px;
+}
+
+.contact_icon{
+    position: relative;
+    top: 4px;
+    color: var(--color-primary);
+}
+
 .form{
     position: relative;
     z-index: 2;
-    width: 100%;
-    max-width: 1000px;
+    width: 40vw;
+    /* max-width: 100px; */
     padding: 50px;
+    left: 200px;
     background: rgba(255,255,255,0.1);
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     border:1px solid rgba(255,255,255,0.25);
@@ -55,19 +85,6 @@
     background: rgba(255,255,255,0.05);
     pointer-events: none;
     transform: skewX(-15deg);
-}
-
-.form h2{
-    width: 100%;
-    text-align: center;
-    color:var(--color-white);
-    font-size: 30px;
-    margin-bottom: 10px;
-    text-shadow: 
-        0 0 5px #81c7fa,
-        0 0 10px #81c7fa,
-        0 0 15px #81c7fa,
-        0 0 20px #81c7fa;
 }
 
 .form .row100{
@@ -160,17 +177,33 @@
     font-size: 15px;
 }
 
+@media screen and (max-width:1200px){
+    .form{
+        left:100px ;
+    }
+}
+
+@media screen and (max-width:800px){
+    .contact_content{
+        flex-direction: column;
+    }
+
+    .form{
+        left:0px ;
+        width: 60vw;
+    }
+}
+
 @media screen and (max-width:650px) {
     .form{
-        /* padding-top: 10px; */
         padding: 2px;
         margin-bottom: 40px;
     }
 }
 
-@media screen and (max-height:500px) {
+@media screen and (max-width:500px) {
     .form{
-        width: 70%;
+        width: 80vw;
         margin-bottom: 20vh;
     }
 }
