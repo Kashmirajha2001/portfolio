@@ -3,6 +3,7 @@ import Intro from "./intro/Intro";
 import Contact from "./contact/Contact";
 import Navbar from "./nav/Navbar";
 import Mode from "./mode/Mode";
+import Theme from "./theme/Theme";
 import Projects from "./projects/Projects";
 import About from "./about/About";
 import React, { useState, useEffect } from "react";
@@ -27,6 +28,7 @@ function App() {
         <div>
           <Navbar />
           <Mode />
+          <Theme/>
           <Intro />
           <About />
           <Education/>

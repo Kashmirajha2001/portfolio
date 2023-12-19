@@ -27,15 +27,6 @@
   --container-width-sm:90%;
 }
 
-/* .dark-theme{
-  --color-bg: #1f1f38;
-  --color-bg-variant:#2c2c6c;
-  --color-primary:#81c7fa;
-  --color-primary-variant:rgba(77,181,255,0.4);
-  --color-white:#fff;
-  --color-light:rgba(255,255,255,0.6);
-  --color-text: #fff;
-} */
 .light-theme{
   --color-bg: rgb(255, 255, 255);
   --color-bg-variant:rgb(201, 196, 196);

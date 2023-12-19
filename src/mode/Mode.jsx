@@ -3,8 +3,16 @@ import WbSunnyIcon from "@mui/icons-material/WbSunny";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import { useEffect, useState } from "react";
 
+const getStyle=()=>{
+  let style = 'dark-theme';
+  if(localStorage.getItem('mystyle')){
+    style = localStorage.getItem('mystyle');
+  }
+  return style;
+}
+
 const Mode = () => {
-  const [mystyle, setMystyle] = useState("dark-theme");
+  const [mystyle, setMystyle] = useState(getStyle());
   const changeMode = () => {
     if (mystyle === "dark-theme") {
       setMystyle("light-theme");
@@ -15,6 +23,7 @@ const Mode = () => {
 
   useEffect(() => {
     document.documentElement.className = mystyle;
+    localStorage.setItem('mystyle', mystyle);
   }, [mystyle]);
 
   return (
