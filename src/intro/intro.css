@@ -74,12 +74,20 @@
     background: var(--color-primary);
 }
 
-.intro_page .spinners{
-    height: 70px;
-    width: 70px;
+.intro_page .info{
+    /* height: 70px;
+    width: 70px; */
     position: absolute;
-    left: 45%;
+    left: 30%;
     top: 65%;
+}
+
+.intro_page .info div{
+    margin-bottom: 20px;
+}
+
+.intro_page .info div p{
+    color: var(--color-primary);
 }
 
 .intro_page .intro_right{
@@ -98,12 +106,12 @@
     border-radius: 30%;
     overflow: hidden;
     box-shadow: 
-        0 0 5px #81c7fa,
-        0 0 10px #81c7fa,
-        0 0 15px #81c7fa,
-        0 0 20px #81c7fa,
-        0 0 25px #81c7fa, 
-        0 0 35px #81c7fa; 
+        0 0 5px var(--color-primary),
+        0 0 10px var(--color-primary),
+        0 0 15px var(--color-primary),
+        0 0 20px var(--color-primary),
+        0 0 25px var(--color-primary), 
+        0 0 35px var(--color-primary); 
 }
 
 @media screen and (max-width:900px){
@@ -117,9 +125,9 @@
         line-height: 3;
     }
 
-    .intro_page .spinners{
+    /* .intro_page .spinners{
         left: 40%;
-    }
+    } */
 
     .intro_page .intro_right{
         margin-top: 12rem;
@@ -154,9 +162,9 @@
         margin-top: 6rem;
     }
 
-    .intro_page .spinners{
+    /* .intro_page .spinners{
         left: 30%;
-    }
+    } */
 
     .intro_page .intro_right{
         margin-top: 16rem;
@@ -180,15 +188,9 @@
         font-size: 30px;
     }
 
-    .intro_page .spinners{
+    /* .intro_page .spinners{
         top:20%;
         left:60%;
-    }
-
-    /* .spinners .RingLoader{
-        size: 10;
-        height: 10px;
-        width: 10px;
     } */
 
     .intro_page .intro_right{

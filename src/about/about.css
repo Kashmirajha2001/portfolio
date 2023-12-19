@@ -10,7 +10,7 @@
 }
 
 .about .about_heading{
-    color: var(--color-white);
+    color: var(--color-text);
     font-size: 1vw;
     padding-top: 4%;
     line-height: 0 ;
@@ -85,7 +85,7 @@
 }
 
 .about_card h3{
-    color: var(--color-white);
+    color: var(--color-text);
 }
 .about_card small{
     font-size: 0.9rem;
@@ -94,7 +94,7 @@
 
 .about_content p{
     margin: 2rem 0 2.6rem;
-    color: var(--color-light);
+    color: var(--color-text);
 }
 
 .modal{
@@ -125,12 +125,12 @@
 }
 
 .modal .modal_content li{
-    color: var(--color-light);
+    color: var(--color-text);
     list-style: circle;
 }
 
 .modal .modal_content li span{
-    color: var(--color-white);
+    color: var(--color-text);
     font-weight: 700;
 }
 
@@ -142,7 +142,7 @@
     right: -10px;
     top: -10px;
     font-size: 24px;
-    background: var(--color-white);
+    background: var(--color-primary);
     border-radius: 18px;
 }
 

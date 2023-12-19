@@ -9,7 +9,7 @@
 }
 
 .projects h1{
-    color: var(--color-white);
+    color: var(--color-text);
     font-size: 2vw;
     padding-top: 3vh;
 }
@@ -159,13 +159,13 @@
     font-weight: 700;
     margin: 0 auto;
     max-width: 840px;
-    color: var(--color-white);
+    color: var(--color-text);
     font-size: 40px;
     line-height: 1;
 }
 
 .slider-content .inner p {
-    color: var(--color-white);
+    color: var(--color-text);
     font-size: 14px;
     line-height: 1.5;
     margin: 20px auto 30px;

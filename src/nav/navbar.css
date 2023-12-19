@@ -46,14 +46,14 @@
 }
 
 .navigation li.active::before{
-    background: #81c7fa; 
+    background: var(--color-primary); 
     box-shadow: 
-        0 0 5px #81c7fa,
-        0 0 10px #81c7fa,
-        0 0 15px #81c7fa,
-        0 0 20px #81c7fa,
-        0 0 25px #81c7fa, 
-        0 0 35px #81c7fa; 
+        0 0 5px var(--color-primary),
+        0 0 10px var(--color-primary),
+        0 0 15px var(--color-primary),
+        0 0 20px var(--color-primary),
+        0 0 25px var(--color-primary), 
+        0 0 35px var(--color-primary); 
  } 
 .navigation li a{
     display: flex;
@@ -92,10 +92,10 @@
     inset:5px;
     border-radius: 50%;
     box-shadow: 
-        0 0 5px #81c7fa,
-        0 0 10px #81c7fa,
-        0 0 15px #81c7fa,
-        0 0 20px #81c7fa;
+        0 0 5px var(--color-primary-variant),
+        0 0 10px var(--color-primary-variant),
+        0 0 15px var(--color-primary-variant),
+        0 0 20px var(--color-primary-variant);
     /* box-shadow: 
     5px 5px 5px rgba(0,0,0,0.5),
     inset 2px 2px 3px rgba(255,255,2555,0.25),
@@ -111,7 +111,7 @@
 .navigation li a .text{
     position: absolute;
     font-size: 0.55em;
-    color:#103651;
+    color:black;
     border-radius: 10px;
     padding: 1px 5px;
     background: #fff;

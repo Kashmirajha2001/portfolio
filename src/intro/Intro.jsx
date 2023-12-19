@@ -4,9 +4,10 @@ import Social from "./Social";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import CTA from "./CTA";
+import Info from "./Info";
 import Image from "./Image";
 import { motion } from "framer-motion";
-import RingLoader from "react-spinners/RingLoader";
+// import RingLoader from "react-spinners/RingLoader";
 
 const Intro = () => {
   const textRef = useRef(null);
@@ -48,6 +49,7 @@ const Intro = () => {
       {/* <div className="spinners">
         <RingLoader color={"var(--color-primary"} size={100} className="RingLoader"/>
       </div> */}
+      {/* <Info/> */}
       <div className="intro_right">
         <Image />
       </div>
