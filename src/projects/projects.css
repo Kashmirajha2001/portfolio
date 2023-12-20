@@ -5,13 +5,12 @@
     flex-direction: column;
     overflow: hidden;
     height: max-content;
-    margin-bottom: 5%;
+    margin-bottom: 100px;
 }
 
 .projects h1{
     color: var(--color-text);
     font-size: 2vw;
-    padding-top: 3vh;
 }
 
 .projects p{
@@ -21,13 +20,13 @@
 }
 
 .box {
-    position: relative;
-    width: 62vw;
-    height: max-content;
-    display: flex;
+    /* position: relative; */
+    /* width: 62vw; */
+    /* height: max-content; */
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: hidden; */
     /* border-radius: 20px;
     padding: 4px;
     bottom: 5%; */
@@ -36,8 +35,8 @@
 .slider-wrapper {
     z-index: 10;
     position: relative;
-    height:80vh;
     width: 60vw;
+    height:80vh;
     overflow: hidden;
     /* border-radius: 20px; */
 }

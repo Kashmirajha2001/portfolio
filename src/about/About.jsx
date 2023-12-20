@@ -24,16 +24,34 @@ const About = () => {
     hidden: { opacity: 0, scale: 0.2 },
   };
 
+  const variantAboutImage = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0, // Moves to initial position (0px)
+      transition: {
+        duration: 1,
+        type: "tween", // You can adjust the transition type as needed
+      },
+    },
+  };
+
   return (
     <section id="about" className="about">
       <h5 className="about_heading">Get To Know </h5>
       <h1>About Me</h1>
       <div className="about_me">
-        <div className="about_me_img">
+        <motion.div
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={variantAboutImage}
+            exit="hidden"
+            ref={refcard}
+            className="about_me_img">
           <div className="my-img">
             <img src={me} alt="About img" />
           </div>
-        </div>
+        </motion.div>
 
         <div className="about_content">
           <motion.p

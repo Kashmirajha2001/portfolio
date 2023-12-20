@@ -95,6 +95,7 @@
 .about_content p{
     margin: 2rem 0 2.6rem;
     color: var(--color-text);
+    text-align: justify;
 }
 
 .modal{
