@@ -5,6 +5,7 @@ import Navbar from "./nav/Navbar";
 import Mode from "./mode/Mode";
 import Theme from "./theme/Theme";
 import Projects from "./projects/Projects";
+import CodingProfiles from "./codingprofiles/CodingProfiles";
 import About from "./about/About";
 import React, { useState, useEffect } from "react";
 import Loading from "./loading/Loading";
@@ -34,6 +35,7 @@ function App() {
           <Education/>
           <Skills/>
           <Projects />
+          <CodingProfiles/>
           <Contact />
         </div>
       )}

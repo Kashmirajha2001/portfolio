@@ -3,9 +3,11 @@ import { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import Alert from "@mui/material/Alert";
 import { motion } from "framer-motion";
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
+import EmailIcon from "@mui/icons-material/Email";
+import img from "../assets/contact.png";
 
 const Contact = () => {
   const [flag, setFlag] = useState(false);
@@ -36,17 +38,47 @@ const Contact = () => {
       <p>Let's get connected</p>
       <div className="contact_content">
         <div className="contact_left">
-          <div>
-            <h3>Email</h3>
-            <p>kashmirajha2001@gmail.com</p>
+          <div className="contact_img">
+            <img src={img} alt="" />
           </div>
-          <div>
-            <h3><LinkedInIcon className="contact_icon"/> LinkedIn</h3>
-            <a href="https://www.linkedin.com/in/kashmira-jha-52405022b" target='_blank' className="btn">Connect <ArrowCircleRightIcon className="contact_icon"/></a>
+          <div className="contact_text">
+            <h2>Get In Touch!</h2>
+            <p>
+              Feel free to get in touch with me. I am always open to discussing
+              projects, creative ideas to be part of your visins.
+            </p>
           </div>
-          <div>
-            <h3><InstagramIcon className="contact_icon"/> Instagram</h3>
-            <a href="https://instagram.com/artsbykash?igshid=MzNlNGNkZWQ4Mg==" className="btn" style={{marginBottom:"20px"}}>Connect <ArrowCircleRightIcon className="contact_icon"/></a>
+          <div className="contact_modes">
+            <div>
+              <h3>
+                <EmailIcon className="contact_icon" /> Email
+              </h3>
+              <p>kashmirajha2001@gmail.com</p>
+            </div>
+            <div>
+              <h3>
+                <LinkedInIcon className="contact_icon" /> LinkedIn
+              </h3>
+              <a
+                href="https://www.linkedin.com/in/kashmira-jha-52405022b"
+                target="_blank"
+                className="btn-"
+              >
+                Connect <ArrowCircleRightIcon className="contact_icon" />
+              </a>
+            </div>
+            <div>
+              <h3>
+                <InstagramIcon className="contact_icon" /> Instagram
+              </h3>
+              <a
+                href="https://instagram.com/artsbykash?igshid=MzNlNGNkZWQ4Mg=="
+                className="btn-"
+                style={{ marginBottom: "20px" }}
+              >
+                Connect <ArrowCircleRightIcon className="contact_icon" />
+              </a>
+            </div>
           </div>
         </div>
         <form ref={form} className="form" onSubmit={sendEmail}>

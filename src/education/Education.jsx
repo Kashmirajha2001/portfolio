@@ -48,12 +48,7 @@ const Education = () => {
           <div
             className="education_contents"
           >
-            <motion.div
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variantEd}
-            exit="hidden"
-            ref={ref} className="content_box">
+            <div className="content_box">
               <h3>2020-2024</h3>
               <h2>Bachelor of Technology(B.Tech)</h2>
               <p>Computer Science & Engineering</p>
@@ -61,13 +56,8 @@ const Education = () => {
                 <span>CGPA: </span>9.48
               </p>
               <p>Meghnad Saha Institute of Technology</p>
-            </motion.div>
-            <motion.div
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variantEd}
-            exit="hidden"
-            ref={ref} className="content_box">
+            </div>
+            <div className="content_box">
               <h3>2018-2020</h3>
               <h2>Higher Secondary Education</h2>
               <p>
@@ -77,13 +67,8 @@ const Education = () => {
                 West Bengal Council of Higher Secondary Education, Sarsuna High
                 School, Kolkata
               </p>
-            </motion.div>
-            <motion.div
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variantEd}
-            exit="hidden"
-            ref={ref} className="content_box">
+            </div>
+            <div className="content_box">
               <h3>May 2018</h3>
               <h2>Secondary Education</h2>
               <p>
@@ -93,7 +78,7 @@ const Education = () => {
                 West Bengal Board of Secondary Education, Barisha Girls' High
                 School, Kolkata
               </p>
-            </motion.div>
+            </div>
           </div>
         </div>
         <motion.div

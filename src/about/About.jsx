@@ -5,7 +5,7 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import Popup from "reactjs-popup";
-import { motion } from "framer-motion";
+import { invariant, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const About = () => {
@@ -55,6 +55,7 @@ const About = () => {
 
         <div className="about_content">
           <motion.p
+          initial="hidden"
             animate={inView ? "visible" : "hidden"}
             variants={variantAbout}
             exit="hidden"

@@ -42,13 +42,68 @@
 
 .contact_content{
     display: flex;
-    align-items:flex-start;
+    align-items:center;
+    justify-content: center;
     z-index: 10;
-    /* gap: 10vw; */
+    gap: 10vw;
 }
 
-.contact_left div{
-    padding: 25px 0 25px;
+.contact_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact_img{
+    width: 300px;
+    animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
+    overflow: visible;
+}
+
+@keyframes fadeInFromTop{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floating {
+    0%{
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+    25%{
+        transform: translate(3%, 5%) rotate(360deg);
+    }
+    50%{
+        transform: translate(5%, 3%) rotate(360deg);
+    }
+    75%{
+        transform: translate(0%, 5%) rotate(360deg);
+    }
+    100%{
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+}
+
+.contact_text p{
+    max-width: 400px;
+    color: var(--color-text);
+    text-align: justify;
+}
+
+.contact_modes{
+    display: flex;
+    gap: 15px;
+}
+
+.contact_modes div a{
+    position: relative;
+    top: -5%;
 }
 
 .contact_icon{
@@ -63,7 +118,7 @@
     width: 40vw;
     /* max-width: 100px; */
     padding: 50px;
-    left: 200px;
+    /* left: 200px; */
     background: rgba(255,255,255,0.1);
     box-shadow: 0 25px 45px rgba(0,0,0,0.1);
     border:1px solid rgba(255,255,255,0.25);
@@ -177,22 +232,25 @@
 }
 
 @media screen and (max-width:1200px){
-    .form{
-        left:100px ;
-    }
-}
-
-@media screen and (max-width:800px){
     .contact_content{
         flex-direction: column;
     }
-
-    .contact_left div{
-        padding: 5px 0 5px;
+    .contact_text p{
+        max-width: 60vw;
     }
 
+    /* .contact_content{
+        gap: 5vw;
+    } */
+}
+
+@media screen and (max-width:800px){
+
+    /* .contact_left div{
+        padding: 5px 0 5px;
+    } */
+
     .form{
-        left:0px ;
         width: 60vw;
     }
 }
@@ -201,6 +259,16 @@
     .form{
         padding: 2px;
         margin-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:550px){
+    .contact_img{
+        width: 250px;
+        margin-bottom: 20px;
+    }
+    .contact_modes{
+        flex-direction: column;
     }
 }
 
