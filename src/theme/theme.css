@@ -1,12 +1,13 @@
 .themes{
     position: fixed;
-    right: 0;
-    top: 60px;
-    background-color: var(--color-bg-variant);
-    padding: 5px 10px 5px 30px;
-    box-shadow: 4px 0 4px var(--color-bg-variant);
     z-index:100;
+    padding: 5px 10px 5px 30px;
     border-radius: 10px;
+    top: 60px;
+    right: 0;
+    background: transparent;
+    background-color: var(--color-bg-variant);
+    box-shadow: 4px 0 4px var(--color-bg-variant);
     transform: translateX(100%);
     transition: all 0.3s ease;
 }

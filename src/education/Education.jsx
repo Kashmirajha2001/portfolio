@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
+import img from "../assets/education.png"
 // import AccountTreeIcon from '@mui/icons-material/AccountTree';
 
 const Education = () => {
@@ -100,6 +101,9 @@ const Education = () => {
               <h3>Projects</h3>
               <p>5+</p>
             </div>
+          </div>
+          <div className="education_img">
+            <img src={img} alt="" />
           </div>
         </motion.div>
       </div>

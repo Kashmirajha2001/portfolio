@@ -3,6 +3,7 @@
 }
 
 .contact{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +38,7 @@
     width: 100%;
     height: 100%;
     background: linear-gradient(var(--color-bg),var(--color-primary));
-    clip-path: circle(18% at 20% 40%);
+    clip-path: circle(15% at 25% 30%);
 }
 
 .contact_content{
@@ -58,7 +59,6 @@
 .contact_img{
     width: 300px;
     animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
-    overflow: visible;
 }
 
 @keyframes fadeInFromTop{
@@ -232,30 +232,43 @@
 }
 
 @media screen and (max-width:1200px){
+    .contact::before{
+        clip-path: circle(15% at 75% 80%);
+    }
+    
+    .contact::after{
+        clip-path: circle(15% at 25% 40%);
+    }
+
     .contact_content{
         flex-direction: column;
+        gap: 50px;
     }
+
+    .contact_img{
+        margin-bottom: 20px;
+    }
+    
     .contact_text p{
         max-width: 60vw;
     }
-
-    /* .contact_content{
-        gap: 5vw;
-    } */
 }
 
 @media screen and (max-width:800px){
-
-    /* .contact_left div{
-        padding: 5px 0 5px;
-    } */
-
     .form{
         width: 60vw;
     }
 }
 
 @media screen and (max-width:650px) {
+    .contact::before{
+        clip-path: circle(12% at 75% 80%);
+    }
+    
+    .contact::after{
+        clip-path: circle(12% at 25% 40%);
+    }
+
     .form{
         padding: 2px;
         margin-bottom: 40px;
@@ -265,7 +278,6 @@
 @media screen and (max-width:550px){
     .contact_img{
         width: 250px;
-        margin-bottom: 20px;
     }
     .contact_modes{
         flex-direction: column;
