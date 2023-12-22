@@ -1,0 +1,37 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10vw;
+}
+
+.footer h2{
+    margin-bottom: 10px;
+}
+
+.footer_socials{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 20px;
+}
+
+.footer_socials::before{
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: var(--color-primary);
+}
+
+.footer_socials::after{
+    content: "";
+    width: 2rem;
+    height: 1px;
+    background: var(--color-primary);
+}
+
+.copywrite{
+    margin-top: 10vw;
+    color: var(--color-light);
+}

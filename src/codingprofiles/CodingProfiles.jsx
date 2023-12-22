@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./codingprofiles.css";
-// import gfg from "../assets/gfg.png";
-// import codingninjas from "../assets/codingninjas.svg";
 import Slide from "./Slide";
 import datas from "./data";
 

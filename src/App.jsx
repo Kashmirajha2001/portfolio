@@ -11,6 +11,7 @@ import React, { useState, useEffect } from "react";
 import Loading from "./loading/Loading";
 import Skills from "./Skills/Skills";
 import Education from "./education/Education";
+import Footer from "./footer/Footer";
 
 function App() {
   const [loading, setLoading] = useState(false);
@@ -37,6 +38,7 @@ function App() {
           <Projects />
           <CodingProfiles/>
           <Contact />
+          <Footer/>
         </div>
       )}
     </div>

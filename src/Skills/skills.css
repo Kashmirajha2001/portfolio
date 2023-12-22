@@ -25,6 +25,7 @@
     align-items: center;
     flex-direction: column;
     gap: 5rem;
+    position: relative;
 }
 .skills_container{
     position: relative;
@@ -110,6 +111,12 @@
     top: 4rem;
 }
 
+.skills_back{
+    position: absolute;
+    width: 9rem;
+    top: 50%;
+}
+
 @media screen and (max-width:1035px){
     .skills{
         gap: 0.5rem;
@@ -120,6 +127,12 @@
     .circles{
         flex-direction: column;
         gap:6rem;
+    }
+}
+
+@media screen and (max-width:450px){
+    .skills_back{
+        width: 7rem;
     }
 }
 

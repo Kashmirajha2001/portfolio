@@ -10,7 +10,7 @@
     flex-direction: column;
     padding: 20px;
     width: 100%;
-    margin-bottom: 10rem;
+    margin-bottom: 4em;
 }
 
 .contact h2{
@@ -261,6 +261,10 @@
 }
 
 @media screen and (max-width:650px) {
+    /* .contact{
+        margin-bottom: 60px;
+    } */
+
     .contact::before{
         clip-path: circle(12% at 75% 80%);
     }
@@ -271,7 +275,7 @@
 
     .form{
         padding: 2px;
-        margin-bottom: 40px;
+        /* margin-bottom: 40px; */
     }
 }
 
@@ -285,8 +289,12 @@
 }
 
 @media screen and (max-width:500px) {
+    /* .contact{
+        margin-bottom: 20px;
+    } */
+
     .form{
         width: 80vw;
-        margin-bottom: 20vh;
+        /* margin-bottom: 20vh; */
     }
 }

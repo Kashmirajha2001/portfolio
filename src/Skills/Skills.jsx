@@ -10,6 +10,9 @@ import Python from "../assets/python.png";
 import Git from "../assets/github.png";
 import VS from "../assets/vs.png";
 import Figma from "../assets/figma.png";
+import skill1 from "../assets/skill1.png"
+import skill2 from "../assets/skill2.png"
+import skill3 from "../assets/skill3.png"
 // import Node from "../assets/nodejs.png";
 import { motion } from "framer-motion";
 
@@ -49,7 +52,9 @@ const Skills = () => {
             <div className="backCircle blueCircle"></div>
             <div className="backCircle yellowCircle"></div>
           </motion.div>
-            {/* </div> */}
+            <div className="skills_back">
+              <img src={skill1} alt="" />
+            </div>
         </div>
 
         <div className="circle_componets">
@@ -75,7 +80,9 @@ const Skills = () => {
             <div className="backCircle blueCircle"></div>
             <div className="backCircle yellowCircle"></div>
           </motion.div>
-          {/* </div> */}
+          <div className="skills_back">
+              <img src={skill2} alt="" />
+          </div>
         </div>
 
         <div className="circle_componets">
@@ -101,7 +108,9 @@ const Skills = () => {
             <div className="backCircle blueCircle"></div>
             <div className="backCircle yellowCircle"></div>
           </motion.div>
-          {/* </div> */}
+          <div className="skills_back">
+              <img src={skill3} alt="" />
+          </div>
         </div>
       </div>
     </section>
