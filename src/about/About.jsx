@@ -5,62 +5,32 @@ import EmojiEventsIcon from "@mui/icons-material/EmojiEvents";
 import SchoolIcon from "@mui/icons-material/School";
 import AccountTreeIcon from "@mui/icons-material/AccountTree";
 import Popup from "reactjs-popup";
-import { invariant, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import {Fade, Zoom } from "react-awesome-reveal";
 
 const About = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
 
   const [refcard, inViewCard] = useInView({
     threshold: 0,
     triggerOnce: true,
   });
 
-  const variantAbout = {
-    visible: { opacity: 1, scale: 1 },
-    hidden: { opacity: 0, scale: 0.2 },
-  };
-
-  const variantAboutImage = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0, // Moves to initial position (0px)
-      transition: {
-        duration: 1,
-        type: "tween", // You can adjust the transition type as needed
-      },
-    },
-  };
-
   return (
     <section id="about" className="about">
       <h5 className="about_heading">Get To Know </h5>
       <h1>About Me</h1>
       <div className="about_me">
-        <motion.div
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variantAboutImage}
-            exit="hidden"
-            ref={refcard}
-            className="about_me_img">
-          <div className="my-img">
-            <img src={me} alt="About img" />
+        <Fade direction="up" triggerOnce={false}>
+          <div className="about_me_img">
+            <div className="my-img">
+              <img src={me} alt="About img" />
+            </div>
           </div>
-        </motion.div>
-
+        </Fade>
         <div className="about_content">
-          <motion.p
-          initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variantAbout}
-            exit="hidden"
-            transition={{ duration: 2 }}
-            ref={ref}
+          <Zoom triggerOnce={false}>
+          <p
           >
             Hello there! I am a Computer Science Engineering (CSE) student with
             a passion for frontend development. I specialize in using HTML, CSS,
@@ -71,7 +41,8 @@ const About = () => {
             languages, I am proficient in C++, Java, and Python. I am always
             eager to learn new technologies and stay up-to-date with the latest
             trends in the industry.
-          </motion.p>
+          </p>
+          </Zoom>
           <div className="about_cards">
             <Popup
               trigger={
@@ -122,15 +93,12 @@ const About = () => {
                 </div>
               )}
             </Popup>
-            
+
             <motion.a
               ref={refcard}
               initial={{ rotateY: 0 }}
               animate={{ rotateY: inViewCard ? 360 : 0 }}
-              transition={{ duration: 1 }}
-              className="about_card"
-              href="#skills"
-            >
+              transition={{ duration: 1 }} className="about_card" href="#skills">
               <div className="about_icon">
                 <SchoolIcon />
               </div>

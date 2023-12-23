@@ -1,43 +1,10 @@
 import "./education.css";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkHistoryIcon from "@mui/icons-material/WorkHistory";
-import img from "../assets/education.png"
-// import AccountTreeIcon from '@mui/icons-material/AccountTree';
+import img from "../assets/education.png";
+import { Fade } from "react-awesome-reveal";
 
 const Education = () => {
-  const [ref, inView] = useInView({
-    threshold: 0.1,
-    triggerOnce: false,
-  });
-
-  const variantEd = {
-    // visible: { opacity: 1, scale: 1 },
-    // hidden: { opacity: 0, scale: 0.3 },
-    hidden: { opacity: 0, y: 100 }, // Starts from left (-100px)
-    visible: {
-      opacity: 1,
-      y: 0, // Moves to initial position (0px)
-      transition: {
-        duration: 1,
-        type: "tween", // You can adjust the transition type as needed
-      },
-    },
-  };
-
-  const variantEdExperience = {
-    hidden: { opacity: 0, y: 100 }, // Starts from right (100px)
-    visible: {
-      opacity: 1,
-      y: 0, // Moves to initial position (0px)
-      transition: {
-        duration: 1,
-        type: "tween", // You can adjust the transition type as needed
-      },
-    },
-  };
-
   return (
     <section className="education">
       <h1>Qualification</h1>
@@ -46,9 +13,8 @@ const Education = () => {
           <h2>
             <SchoolIcon className="education_icon" /> Education
           </h2>
-          <div
-            className="education_contents"
-          >
+          <div className="education_contents">
+          <Fade direction="left" triggerOnce={false} cascade={false} duration={2000}>
             <div className="content_box">
               <h3>2020-2024</h3>
               <h2>Bachelor of Technology(B.Tech)</h2>
@@ -80,32 +46,28 @@ const Education = () => {
                 School, Kolkata
               </p>
             </div>
+          </Fade>
           </div>
         </div>
-        <motion.div
-            initial="hidden"
-            animate={inView ? "visible" : "hidden"}
-            variants={variantEdExperience}
-            exit="hidden"
-            // transition={{ duration: 1 }}
-            ref={ref}
-            className="qualification_right">
-          <h2>
-            <WorkHistoryIcon className="education_icon" /> Experience
-          </h2>
-          <div className="experience_info">
-            <div>
-              <h3>Fresher</h3>
+        <Fade direction="up" triggerOnce={false}>
+          <div className="qualification_right">
+            <h2>
+              <WorkHistoryIcon className="education_icon" /> Experience
+            </h2>
+            <div className="experience_info">
+              <div>
+                <h3>Fresher</h3>
+              </div>
+              <div>
+                <h3>Projects</h3>
+                <p>5+</p>
+              </div>
             </div>
-            <div>
-              <h3>Projects</h3>
-              <p>5+</p>
+            <div className="education_img">
+              <img src={img} alt="" />
             </div>
           </div>
-          <div className="education_img">
-            <img src={img} alt="" />
-          </div>
-        </motion.div>
+        </Fade>
       </div>
     </section>
   );

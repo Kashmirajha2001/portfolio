@@ -7,6 +7,7 @@ import CTA from "./CTA";
 import Info from "./Info";
 import Image from "./Image";
 import { motion } from "framer-motion";
+import Fade from "react-reveal/Fade";
 // import RingLoader from "react-spinners/RingLoader";
 
 const Intro = () => {
@@ -24,28 +25,24 @@ const Intro = () => {
     return () => {
       typed.destroy();
     };
-
   }, []);
 
   return (
     <section id="#" className="intro_page">
-      <motion.div
-        initial={{x:-500}}
-        animate={{x:0}}
-        transition={{duration:1.5}}
-       className="intro_left"
-       >
-        <h1 href="#">
-          <span>Kashmira Jha</span>_
-        </h1>
-        <h2>Hi there, It's me</h2>
-        <h1 className="header">Kashmira</h1>
-        <h3>
-          a <span ref={textRef}> </span>
-        </h3>
-        <CTA />
-        <Social /> 
-      </motion.div>
+      <Fade left>
+        <div className="intro_left">
+          <h1 href="#">
+            <span>Kashmira Jha</span>_
+          </h1>
+          <h2>Hi there, It's me</h2>
+          <h1 className="header">Kashmira</h1>
+          <h3>
+            a <span ref={textRef}> </span>
+          </h3>
+          <CTA />
+          <Social />
+        </div>
+      </Fade>
       {/* <div className="spinners">
         <RingLoader color={"var(--color-primary"} size={100} className="RingLoader"/>
       </div> */}

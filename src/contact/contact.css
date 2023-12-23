@@ -58,10 +58,10 @@
 
 .contact_img{
     width: 300px;
-    animation: fadeInFromTop .5s linear forwards, floating ease 4s infinite;
+    animation: cfadeInFromTop .5s linear forwards, cfloating ease 4s infinite;
 }
 
-@keyframes fadeInFromTop{
+@keyframes cfadeInFromTop{
     from{
         opacity: 0;
         transform: translateY(-10px);
@@ -72,7 +72,7 @@
     }
 }
 
-@keyframes floating {
+@keyframes cfloating {
     0%{
         transform: translate(0%, 0%) rotate(360deg);
     }
