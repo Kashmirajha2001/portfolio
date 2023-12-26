@@ -9,6 +9,42 @@ import { useState, useEffect, useRef } from "react";
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState("#");
   
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+
+      let isSectionVisible = false;
+
+      sections.forEach((section) => {
+        const top = section.offsetTop - 50;
+        const height = section.offsetHeight;
+        const sectionTop = top - scrollPosition;
+        const sectionBottom = sectionTop + height;
+
+        if (
+          sectionTop < windowHeight * 0.6 &&
+          sectionBottom > windowHeight * 0.4
+        ) {
+          setActiveNav(`#${section.id}`);
+          isSectionVisible = true;
+        }
+      });
+
+      if (scrollPosition === 0) {
+        setActiveNav("#");
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+
   return (
     <div className="navBar">
       <ul className="navigation">

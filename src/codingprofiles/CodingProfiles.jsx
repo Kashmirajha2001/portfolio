@@ -20,12 +20,12 @@ const CodingProfiles = () => {
     }
   }, [index, data]);
 
-  // useEffect(() => {
-  //   let slider = setInterval(() => {
-  //     setIndex(index + 1);
-  //   }, 3000);
-  //   return () => clearInterval(slider);
-  // }, [index]);
+  useEffect(() => {
+    let slider = setInterval(() => {
+      setIndex(index + 1);
+    }, 3000);
+    return () => clearInterval(slider);
+  }, [index]);
 
   return (
     <section id="codingprofiles" className="codingprofiles">

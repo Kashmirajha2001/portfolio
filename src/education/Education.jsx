@@ -6,7 +6,7 @@ import { Fade } from "react-awesome-reveal";
 
 const Education = () => {
   return (
-    <section className="education">
+    <section className="education" id="education">
       <h1>Qualification</h1>
       <div className="education_content">
         <div className="qualification_left">
@@ -49,7 +49,7 @@ const Education = () => {
           </Fade>
           </div>
         </div>
-        <Fade direction="up" triggerOnce={false}>
+        <Fade direction="down" triggerOnce={false}>
           <div className="qualification_right">
             <h2>
               <WorkHistoryIcon className="education_icon" /> Experience
@@ -63,9 +63,9 @@ const Education = () => {
                 <p>5+</p>
               </div>
             </div>
-            {/* <div className="education_img">
+            <div className="education_img">
               <img src={img} alt="" />
-            </div> */}
+            </div>
           </div>
         </Fade>
       </div>
