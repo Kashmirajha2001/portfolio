@@ -63,9 +63,9 @@ const Education = () => {
                 <p>5+</p>
               </div>
             </div>
-            <div className="education_img">
+            {/* <div className="education_img">
               <img src={img} alt="" />
-            </div>
+            </div> */}
           </div>
         </Fade>
       </div>

@@ -4,10 +4,11 @@ import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import SchoolIcon from "@mui/icons-material/School";
 import ContactPageOutlinedIcon from "@mui/icons-material/ContactPageOutlined";
 import AccountTreeOutlinedIcon from "@mui/icons-material/AccountTreeOutlined";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState("#");
+  
   return (
     <div className="navBar">
       <ul className="navigation">

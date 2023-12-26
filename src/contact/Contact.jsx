@@ -51,7 +51,7 @@ const Contact = () => {
               </p>
             </div>
           </Fade>
-          <Fade direction="right" duration={2000} triggerOnce={true}>
+          <Fade direction="left" duration={2000} triggerOnce={true}>
             <div className="contact_modes">
               <div>
                 <h3>
